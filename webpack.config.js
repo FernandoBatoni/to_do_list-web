@@ -25,12 +25,18 @@ module.exports = {
       {
         test: /\.less$/i,
         use: [
-          "style-loader",
-          "css-loader",
-          "less-loader"
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "less-loader",
+          }
         ],
-        exclude: /node_modules/
-      }
+        exclude: /node_modules/,
+      },
     ]
   },
   plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, './src/index.html')})]
