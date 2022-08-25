@@ -62,6 +62,3 @@ formItem.addEventListener("submit", (e) => {
   addListItem(formTitleData.value, formContentData.value);
 })
 
-function teste() {
-  console.log('testando')
-}

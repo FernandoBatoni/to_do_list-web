@@ -22,20 +22,14 @@ module.exports = {
         loader: "ts-loader",
         exclude: /node_modules/,
       },
-      {
-        test: /\.less$/i,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "less-loader",
-          }
-        ],
-        exclude: /node_modules/,
+        {
+          test: /\.less$/i,
+          use: [
+            // compiles Less to CSS
+            "style-loader",
+            "css-loader",
+            "less-loader",
+          ],
       },
     ]
   },
